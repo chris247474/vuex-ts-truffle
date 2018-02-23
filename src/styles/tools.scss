@@ -1,0 +1,83 @@
+// imports
+@import "variables.scss";
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: $mainColor;
+  box-sizing: border-box;
+  background-color: $w250;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column wrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: inherit;
+  flex-flow: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  align-content: inherit;
+}
+
+span {
+  padding: 0;
+  margin: 0;
+}
+
+p{
+  display: flex;
+  margin: 0;
+}
+
+ul, li {
+  @include userselect;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px $w230 inset;
+  -webkit-text-fill-color: $g60;
+}
+
+input, textarea, button {
+  display: flex;
+  outline: none;
+  border: none;
+  background: none;
+  resize: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+textarea.input-form {
+  height: 80px;
+  line-height: 20px;
+}
+
+pre{
+  width: 100%;
+  word-break: break-all;
+  white-space: pre-line;
+}

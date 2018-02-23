@@ -1,0 +1,72 @@
+@import "variables.scss";
+
+
+.form-valid-icon{
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  height: 20px;
+  width: 20px;
+  @include translateY(-50%);
+  @include bg-center;
+
+  &.form-valid{
+    background-image: url('~@icons/form-valid.svg');
+  }
+  &.form-invalid{
+    background-image: url('~@icons/form-invalid.svg');
+  }
+  &.form-required{
+    background-image: url('~@icons/form-required.svg');
+    height: 15px;
+    width: 15px;
+    right: 7px;
+    cursor: pointer;
+    &:hover:after{
+      content:"Champs requis";
+      background-color: $g70;
+      color: white;
+      position: absolute;
+      width: auto;
+      height: auto;
+      left: 50%;
+      @include translateX(-50%);
+      text-align: center;
+      top: calc(-100% - 25px);
+      border-radius: 3px;
+      font-size: 11px;
+      opacity: 1;
+      padding: 4px 6px 4px 6px;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .not-tablet {
+    display: none!important;
+  }
+}
+
+
+@media screen and (min-width: 950px) {
+  .tablet {
+    display: none!important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .not-mobile {
+    display: none!important;
+  }
+}
+
+
+@media screen and (min-width: 480px) {
+  .mobile {
+    display: none!important;
+  }
+}
+
+h1 {
+  text-align: center;
+}

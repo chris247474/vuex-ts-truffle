@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "module": "esnext", 
+    "target": "es2016",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true, 
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "pretty": true,
+    "noImplicitThis": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015",
+      "es2015.promise"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": ["./*"],
+      "@components": ["./components/components/index.ts"],
+      "@components/*": ["./components/components/*"],
+      "@views": ["./components/views/index.ts"],
+      "@views/*": ["./components/views/*"],
+      "@images/*": ["./assets/images/*"],
+      "@icons/*": ["./assets/icons/*"],
+      "@css": ["./styles/variables.scss"],
+      "@utils": ["./utils/index.ts"],
+      "@utils/*": ["./utils/*"],
+      "@router": ["./router/index.ts"],
+      "@validators": ["./utils/validators.ts"],
+      "@methods": ["./utils/methods.ts"],
+      "@filters": ["./utils/filters.ts"],
+      "@types": ["./typings/index.ts"],
+      "@store": ["./store/index.ts"],
+      "@modules": ["./store/Modules/index.ts"]
+    },
+    "sourceMap": true, 
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "typings/browser.d.ts",
+    "typings/browser",
+    "node_modules" 
+  ],
+  "compileOnSave": true
+}
