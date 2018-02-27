@@ -57,6 +57,16 @@ export const routesList: RouteConfig[]  = [
       redirect: '/'
     },
   },
+  { path: '/login', name: 'Login',
+    component: () => import('@components/Login.vue'),
+    meta: {
+      noAuth: true
+    },
+    props: {
+      isPopup: false,
+      redirect: '/'
+    },
+  },
   { path: '/*',
     alias: '404',
     component: () => import('@views/Home/Home.vue')

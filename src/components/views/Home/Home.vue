@@ -1,11 +1,9 @@
 <template>
   <div class='home'>
-    <section class='image-home' v-bg-blur:local.jpg="'home_image'">
-      <div class='background-mask'></div>
-    </section>
+
 
     <section class='help '>
-      <span class='title'>Comment ça marche</span>
+      <span class='title'>LifeMesh</span>
       <ul class='help-wrapper'>
         <li v-for='help in helps' :key='help.text' v-once>
           <div class='icon'>
@@ -18,9 +16,7 @@
       </ul>
     </section>
 
-    <section class='france-map line-separator'>
-      <MapViewer svgPath='departements' @pathSelected='handlePathSelect' />
-    </section>
+
   </div>
 </template>
 
@@ -30,12 +26,12 @@ import Component from 'vue-class-component';
 import { State, Getter, Mutation } from 'vuex-class';
 import { svgPath } from '@types';
 import router from '@router';
-import { StarRating, SvgIcon, MapViewer } from '@components';
+import { StarRating, SvgIcon } from '@components';
 const css = require('@css');
 
 @Component({
   components: {
-    StarRating, SvgIcon, MapViewer
+    StarRating, SvgIcon
   }
 })
 export default class Home extends Vue {
@@ -44,9 +40,7 @@ export default class Home extends Vue {
 
   public helps = [
     {icon: require('@icons/annonce.svg'), text:'Je publie une annonce gratuitement sur le site!'},
-    {icon: require('@icons/people.svg'), text:'Des déménageurs répertoriés viendront proposer leur services'},
-    {icon: require('@icons/payment.svg'), text:'Je prépaie en ligne. La somme sera verséee une fois le déménagement fini'},
-    {icon: require('@icons/star_plain.svg'), text:'Je laisse un avis et une note sur les déménageurs'},
+    {icon: require('@icons/people.svg'), text:'Des déménageurs répertoriés viendront proposer leur services'}
   ];
 
   handlePathSelect(path: svgPath) {

@@ -127,8 +127,8 @@ export default class HeaderComponent extends Vue {
   }
 
   public nav = [
-    { title: "Les déménagements", name: "moving", link: "/moving", icon: require('@icons/truck.svg')},
-    { title: "Les déménageurs", name: "movers", link: "/movers", icon: require('@icons/people.svg')}
+    { title: "Needs", name: "moving", link: "/moving", icon: require('@icons/truck.svg')},
+    { title: "Offers", name: "movers", link: "/movers", icon: require('@icons/people.svg')}
   ];
 
 }
